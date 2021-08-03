@@ -12,7 +12,7 @@ const rl = readline.createInterface({
 
 console.log('Enter password');
 rl.question('==> ', (line) => {
-  const errors = validate(line);
+  const errors = validate(line, process.argv.includes('-a'));
   if (Object.keys(errors).length) {
     console.log(`${RED}Invalid${RESET}`)
   } else {

@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "start-admin": "node app.js -a",
     "test": "mocha"
   },
   "author": "",

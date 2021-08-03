@@ -7,7 +7,7 @@
 
 ### Test Manually
 1. Follow the Setup instructions
-2. Run `npm start`
+2. Run `npm start` to run as as normal or `npm run start-admin` to run as an admin
 3. Enter the password you want validated
 
 ### Test Automatically
