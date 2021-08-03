@@ -21,7 +21,7 @@ describe('validate()', function() {
       for (let substr3 = substr2; substr3 < substrs.length; substr3++) {
         const str = `=${substrs[substr1]}${substrs[substr2]}${substrs[substr3]}`;
 
-        if (str.includes(LETTERS) && str.includes(NUMBERS)) {
+        if (str.includes(LETTERS) && str.includes(NUMBERS) && str.length >= 10) {
           it(`should allow ${str} as normal`, function() {
             assert.deepEqual(validate(str), {});
           });

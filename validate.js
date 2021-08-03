@@ -4,9 +4,9 @@ module.exports = function validate(str, admin=false) {
   console.log(`Testing password: ${str} as ${(admin) ? 'admin' : 'normal'}`);
   console.log(`==============================================================`);
 
-  if (!admin && str.length < 8) {
+  if (!admin && str.length < 10) {
     out.minLengthError = true;
-    console.log(`Password must be at least 8 characters long`);
+    console.log(`Password must be at least 10 characters long`);
   }
 
   if (admin && str.length < 13) {
@@ -24,9 +24,9 @@ module.exports = function validate(str, admin=false) {
     console.log(`Password must contain at least 1 letter`);
   }
 
-  if (admin && !/[!@#$%^&*]/.test(str)) {
+  if (admin && !/[!@#$%^&*].*[!@#$%^&*].*[!@#$%^&*]/.test(str)) {
     out.symbolsRequiredError = true;
-    console.log(`Password must contain at least 1 symbol`);
+    console.log(`Password must contain at least 3 symbols`);
   }
 
   return out;
